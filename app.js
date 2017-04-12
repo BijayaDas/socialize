@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var db = require('./model/db');
 var methodOverride = require('method-override');
 var adminUser = require('./model/admin')
+// in the requirements section
+var ejsLayouts = require("express-ejs-layouts");
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -26,7 +28,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+// in the set up section
+app.use(ejsLayouts);
 app.use('/', routes);
 app.use('/users', users);
 app.use('/admins', admins);
