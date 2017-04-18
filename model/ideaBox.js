@@ -7,3 +7,6 @@ var adminSchema = new mongoose.Schema({
 });
 
 mongoose.model('ideaBox', adminSchema);
+
+// We will encourage people to post their ideas and will deal with companies to adopt those ideas
+// whosever idea gets selected they will get a prize money or royalty on profit.
